@@ -16,12 +16,15 @@ public class AnimationController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.SetBool("isRunningForward", false);
+        animator.SetBool("isRunningBackward", false);
     
         if(Input.GetKey("a") || Input.GetKey("w") || Input.GetKey("d"))
         {
             animator.SetBool("isRunningForward", true);
             animator.SetBool("isRunningBackward", false);
-        }else if(Input.GetKey("s"))
+        }
+        if(Input.GetKey("s"))
         {
             animator.SetBool("isRunningForward", false);
             animator.SetBool("isRunningBackward", true);
