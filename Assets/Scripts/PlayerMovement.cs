@@ -6,29 +6,48 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public CharacterController controller;
-    public float speed = 5.0f;
+    public float moveSpeed = 5.0f;
+    public float rotateSpeed = 5.0f;
 
-    private float horizontalInput;
-    private float forwardInput;
-    //private rigidBody rb;
+    private Vector3 movementPlane;
+
+    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        //rb = GetComponent<RigidBody>();
-        //rb.freezeRotation = true;
+        rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxisRaw("Horizontal");
-        forwardInput = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontalInput, 0f, forwardInput).normalized;
+        
+        movementPlane = Camera.main.transform.forward;
+        movementPlane.y = 0.0f;
 
-        if(direction.magnitude >= 0.1f)
-        {
-            controller.Move(direction * speed * Time.deltaTime);
+        if(Input.GetKey(KeyCode.W)){
+            transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+        }
+
+        if(Input.GetKey(KeyCode.S)){
+            transform.position = transform.position - movementPlane * moveSpeed * Time.deltaTime;
+        }
+
+        if(Input.GetKey(KeyCode.D)){
+            transform.Rotate(Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
+        }
+
+        if(Input.GetKey(KeyCode.A)){
+            transform.Rotate(-Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
+        }
+
+        if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.D)){
+            Debug.Log("Strafe Right");
+        }
+
+        if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.A)){
+            Debug.Log("Strafe Left");
         }
 
         

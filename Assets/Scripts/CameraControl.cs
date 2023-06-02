@@ -65,6 +65,15 @@
                  xDeg += Input.GetAxis ("Mouse X") * xSpeed * 0.02f;
                  yDeg -= Input.GetAxis ("Mouse Y") * ySpeed * 0.02f;
              }
+
+            // Rotate the target when we right click to rotate camera
+             if (Input.GetMouseButton(1))
+             {
+                Quaternion currentCameraRotation = transform.rotation;
+                currentCameraRotation.x = 0.0f;
+                currentCameraRotation.z = 0.0f;
+                target.transform.rotation = currentCameraRotation;
+             }
  
              // otherwise, ease behind the target if any of the directional keys are pressed
              else if (Input.GetAxis("Vertical") != 0 || Input.GetAxis("Horizontal") != 0)

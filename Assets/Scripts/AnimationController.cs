@@ -19,7 +19,7 @@ public class AnimationController : MonoBehaviour
         animator.SetBool("isRunningForward", false);
         animator.SetBool("isRunningBackward", false);
     
-        if(Input.GetKey("a") || Input.GetKey("w") || Input.GetKey("d"))
+        if(Input.GetKey("w"))
         {
             animator.SetBool("isRunningForward", true);
             animator.SetBool("isRunningBackward", false);
