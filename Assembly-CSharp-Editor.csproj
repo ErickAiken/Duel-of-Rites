@@ -37,6 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Scripts\Editor\PT_Create_Prefab_Editor.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExtracterEditor.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliagePainterEditor.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageUtilitiesEditor.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExtracterDetailsWindow.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExporterWindow.cs" />
+     <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExtracterWindow.cs" />
     <Reference Include="UnityEngine">
         <HintPath>E:/Unity/2020.3.15f2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
