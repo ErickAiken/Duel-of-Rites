@@ -29,9 +29,11 @@ public class PlayerMovement : MonoBehaviour
         movementPlane.y = 0.0f;
 
         if(Input.GetKey(KeyCode.W)){
-            Debug.Log(movementPlane);
-            Debug.Log(characterDir);
-            transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+            if(Input.GetMouseButton(0)){
+                transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
+            }else{
+                transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+            }
         }
 
         if(Input.GetKey(KeyCode.S)){
