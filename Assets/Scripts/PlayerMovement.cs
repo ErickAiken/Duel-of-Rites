@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     public float rotateSpeed = 5.0f;
 
     private Vector3 movementPlane;
+    private Vector3 characterDir;
 
     Rigidbody rb;
 
@@ -24,9 +25,12 @@ public class PlayerMovement : MonoBehaviour
     {
         
         movementPlane = Camera.main.transform.forward;
+        characterDir = transform.forward;
         movementPlane.y = 0.0f;
 
         if(Input.GetKey(KeyCode.W)){
+            Debug.Log(movementPlane);
+            Debug.Log(characterDir);
             transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
         }
 
