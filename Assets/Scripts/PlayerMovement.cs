@@ -8,9 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public float moveSpeed = 5.0f;
     public float rotateSpeed = 5.0f;
+    public float jumpValue = 5.0f;
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
+    private bool autoRun = false;
 
     Rigidbody rb;
 
@@ -28,12 +30,17 @@ public class PlayerMovement : MonoBehaviour
         characterDir = transform.forward;
         movementPlane.y = 0.0f;
 
-        if(Input.GetKey(KeyCode.W)){
+        if(Input.GetKey(KeyCode.W) || autoRun){
             if(Input.GetMouseButton(0)){
                 transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
             }else{
                 transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
             }
+        }
+
+        if(Input.GetKey(KeyCode.BackQuote)){
+            Debug.Log("TOGGLE AUTO RUN");
+            autoRun = true;
         }
 
         if(Input.GetKey(KeyCode.S)){
@@ -54,6 +61,10 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.A)){
             Debug.Log("Strafe Left");
+        }
+
+        if(Input.GetKey(KeyCode.Space)){
+            Debug.Log("JUMP");
         }
 
         
