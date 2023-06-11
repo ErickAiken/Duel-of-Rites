@@ -22,7 +22,7 @@ public class AnimationController : MonoBehaviour
         animator.SetBool("isRunningForward", false);
         animator.SetBool("isRunningBackward", false);
     
-        if(Input.GetKey("w") || playerMovemet.autoRun)
+        if(Input.GetKey("w") || playerMovement.autoRun)
         {
             animator.SetBool("isRunningForward", true);
             animator.SetBool("isRunningBackward", false);

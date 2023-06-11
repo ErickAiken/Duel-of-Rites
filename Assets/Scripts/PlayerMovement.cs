@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float rotateSpeed = 5.0f;
     public float jumpValue = 5.0f;
+    public Vector3 strafeRotation = new Vector3(0.0f, 0.0f, 0.0f);
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
@@ -30,11 +31,15 @@ public class PlayerMovement : MonoBehaviour
         characterDir = transform.forward;
         movementPlane.y = 0.0f;
 
+        debug.Log(CharacterDir);
+
         if(Input.GetKey(KeyCode.W) || autoRun){
             if(Input.GetMouseButton(0)){
                 transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
-            }else{
+            }else if(!autoRun){
                 transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+            }else{
+                transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
             }
         }
 
