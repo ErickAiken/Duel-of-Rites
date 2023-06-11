@@ -14110,7 +14110,6 @@ MonoBehaviour:
   controller: {fileID: 1504735511}
   moveSpeed: 7.5
   rotateSpeed: 20
-  jumpValue: 5
   autoRun: 0
 --- !u!54 &1504735509
 Rigidbody:
@@ -14126,7 +14125,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 126
+  m_Constraints: 122
   m_CollisionDetection: 3
 --- !u!143 &1504735511
 CharacterController:
@@ -17591,6 +17590,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1504735506}
+--- !u!114 &1933856108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1933856105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17d20b93c4a6b2f4da96afbebc46ad92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGrounded: 1
 --- !u!1001 &1936101627
 PrefabInstance:
   m_ObjectHideFlags: 0

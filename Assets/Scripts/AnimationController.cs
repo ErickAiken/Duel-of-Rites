@@ -8,12 +8,14 @@ public class AnimationController : MonoBehaviour
     Animator animator;
     public GameObject player;
     PlayerMovement playerMovement;
+    JumpControl jumpControl;
 
     // Start is called before the first frame update
     void Start()
     {
         animator = GetComponent<Animator>(); 
         playerMovement = player.GetComponent<PlayerMovement>();
+        jumpControl = GetComponent<JumpControl>();
     }
 
     // Update is called once per frame
@@ -24,13 +26,30 @@ public class AnimationController : MonoBehaviour
     
         if(Input.GetKey("w") || playerMovement.autoRun)
         {
-            animator.SetBool("isRunningForward", true);
-            animator.SetBool("isRunningBackward", false);
+            if(jumpControl.isGrounded){
+                animator.SetBool("isRunningForward", true);
+                animator.SetBool("isRunningBackward", false);
+            }
+        }
+        if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
+            if(jumpControl.isGrounded){
+                animator.SetBool("isRunningForward", true);
+                animator.SetBool("isRunningBackward", false);
+            }
         }
         if(Input.GetKey("s"))
         {
-            animator.SetBool("isRunningForward", false);
-            animator.SetBool("isRunningBackward", true);
+            if(jumpControl.isGrounded){
+                animator.SetBool("isRunningForward", false);
+                animator.SetBool("isRunningBackward", true);
+            }
         }
+
+        if(Input.GetKey(KeyCode.Space) && !jumpControl.isGrounded){
+            animator.SetBool("isJumping", true);
+        }else if(jumpControl.isGrounded){
+            animator.SetBool("isJumping", false);
+        }
+        
     }
 }

@@ -8,12 +8,11 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
     public float moveSpeed = 5.0f;
     public float rotateSpeed = 5.0f;
-    public float jumpValue = 5.0f;
-    public Vector3 strafeRotation = new Vector3(0.0f, 0.0f, 0.0f);
+    public bool autoRun = false;
+
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
-    public bool autoRun = false;
 
     Rigidbody rb;
 
@@ -30,8 +29,6 @@ public class PlayerMovement : MonoBehaviour
         movementPlane = Camera.main.transform.forward;
         characterDir = transform.forward;
         movementPlane.y = 0.0f;
-
-        debug.Log(CharacterDir);
 
         if(Input.GetKey(KeyCode.W) || autoRun){
             if(Input.GetMouseButton(0)){
@@ -58,7 +55,11 @@ public class PlayerMovement : MonoBehaviour
         }
 
         if(Input.GetKey(KeyCode.S)){
-            transform.position = transform.position - movementPlane * moveSpeed * Time.deltaTime;
+            if(Input.GetMouseButton(0)){
+                transform.position = transform.position - characterDir * moveSpeed * Time.deltaTime;
+            }else{
+                transform.position = transform.position - movementPlane * moveSpeed * Time.deltaTime;
+            }
             autoRun = false;
         }
 
@@ -70,18 +71,20 @@ public class PlayerMovement : MonoBehaviour
             transform.Rotate(-Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
         }
 
+        // Strafe Right
         if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.D)){
             Debug.Log("Strafe Right");
+            if(Input.GetKey(KeyCode.W)){
+                transform.position = transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * Time.deltaTime;
+            }else{
+                transform.position = transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * moveSpeed * Time.deltaTime;
+            }
         }
 
+        // Strafe Left
         if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.A)){
             Debug.Log("Strafe Left");
         }
-
-        if(Input.GetKey(KeyCode.Space)){
-            Debug.Log("JUMP");
-        }
-
         
     }
 }
