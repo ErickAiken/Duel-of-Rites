@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
-    private bool autoRun = false;
+    public bool autoRun = false;
 
     Rigidbody rb;
 
@@ -38,13 +38,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
+            if( !Input.GetKey(KeyCode.W) && !autoRun){
+                transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+            }
+        }
+
+        if(Input.GetKey(KeyCode.W)){
+            autoRun = false;
+        }
+
         if(Input.GetKey(KeyCode.BackQuote)){
-            Debug.Log("TOGGLE AUTO RUN");
             autoRun = true;
         }
 
         if(Input.GetKey(KeyCode.S)){
             transform.position = transform.position - movementPlane * moveSpeed * Time.deltaTime;
+            autoRun = false;
         }
 
         if(Input.GetKey(KeyCode.D)){

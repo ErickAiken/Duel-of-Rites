@@ -14110,6 +14110,8 @@ MonoBehaviour:
   controller: {fileID: 1504735511}
   moveSpeed: 7.5
   rotateSpeed: 20
+  jumpValue: 5
+  autoRun: 0
 --- !u!54 &1504735509
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17588,7 +17590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd121c06149f5d642a660dc444c946d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 0}
+  player: {fileID: 1504735506}
 --- !u!1001 &1936101627
 PrefabInstance:
   m_ObjectHideFlags: 0

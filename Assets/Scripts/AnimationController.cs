@@ -6,11 +6,14 @@ public class AnimationController : MonoBehaviour
 {
 
     Animator animator;
+    public GameObject player;
+    PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>();    
+        animator = GetComponent<Animator>(); 
+        playerMovement = player.GetComponent<PlayerMovement>();
     }
 
     // Update is called once per frame
@@ -19,7 +22,7 @@ public class AnimationController : MonoBehaviour
         animator.SetBool("isRunningForward", false);
         animator.SetBool("isRunningBackward", false);
     
-        if(Input.GetKey("w"))
+        if(Input.GetKey("w") || playerMovemet.autoRun)
         {
             animator.SetBool("isRunningForward", true);
             animator.SetBool("isRunningBackward", false);
