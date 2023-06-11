@@ -2754,6 +2754,7 @@ GameObject:
   - component: {fileID: 154957823}
   - component: {fileID: 154957822}
   - component: {fileID: 154957821}
+  - component: {fileID: 154957824}
   m_Layer: 0
   m_Name: EnemyCanvas
   m_TagString: Untagged
@@ -2842,6 +2843,19 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &154957824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 154957819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 277ad2b0d1336f342acacf3005aa225e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 963194225}
 --- !u!1001 &159575009
 PrefabInstance:
   m_ObjectHideFlags: 0
