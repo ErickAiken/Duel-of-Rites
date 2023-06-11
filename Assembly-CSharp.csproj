@@ -52,7 +52,6 @@
      <Compile Include="Assets\Polyart\PolyartStudio\Scripts\SmoothMouseLook.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\Scripts\Flythrough.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
-     <Compile Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Scripts\PT_Create_Prefab.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageColliders.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageWindTreeWind.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliagePainter.cs" />
@@ -191,9 +190,7 @@
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Foliage.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Surface.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_FoliageBillboard.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Modular_NPC\Shaders\PT_Modular_NPC_Shader_Toon.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Props\PA_SurfaceORM_Cutout.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Plants_Shader.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Water\PA_Water_River.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Animated\Dreamscape_AnimatedMaterial.shader" />
      <None Include="Assets\Polyart\PolyartStudio\DreamscapeTower\Readme.txt" />
@@ -204,12 +201,9 @@
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Simple_Foliage.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Effects\PA_Wingflap.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Waterfall.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Modular_Armors\Shaders\PT_Armors_Shader_PBR.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_FoliageBillboard.shader" />
      <None Include="Assets\Spell Animations\SpellsPack1\ReadMe.txt" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Animated\Dreamscape_BoilingLiquid.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Opaque_Shader.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Foliage_Shader.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Utility\PA_Grid.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_GrassOld.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_GrassTerrain.shader" />
@@ -221,7 +215,6 @@
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Props\PA_TilingPOM.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Masked_Lit.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_WaterfallFoam_Volumetric.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Environments\Sources\Shaders\PT_Vegetation_Flowers_Shader.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Props\PA_SurfaceORM.shader" />
      <None Include="Assets\Spell Animations\Shaders\UberFX.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\PA_Grid.shader" />
@@ -232,14 +225,11 @@
      <None Include="Assets\Polyart\PolyartStudio\Shaders\VS_indirect.cginc" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Effects\PA_CloudShader.shader" />
      <None Include="Assets\GUI\Shaders\UIMaskedBlur.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Modular_Armors\Shaders\PT_Armors_Shader_Toon.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Water\PA_Water_Lake.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Environments\Sources\Shaders\PT_Rock_Shader.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_WorldAlignedBlend.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_StonesDetail.shader" />
      <None Include="Assets\GUI\Readme.txt" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Surface_Coverage.shader" />
-     <None Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Modular_NPC\Shaders\PT_Modular_NPC_Shader_PBR.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_DistantTerrain.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Water.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_Deferred.shader" />

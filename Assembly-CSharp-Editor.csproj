@@ -41,7 +41,6 @@
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExtracterDetailsWindow.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliagePainterEditor.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExporterWindow.cs" />
-     <Compile Include="Assets\LowPolyVillagers\Lowpoly_Characters\Sources\Scripts\Editor\PT_Create_Prefab_Editor.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Editor\FoliageExtracterEditor.cs" />
      <Compile Include="Assets\GUI\Scripts\Editor\Tools\NavigationTools.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Loading Overlay\Editor\UILoadingOverlayManagerEditor.cs" />
