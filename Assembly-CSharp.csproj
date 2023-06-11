@@ -182,6 +182,8 @@
      <Compile Include="Assets\GUI\Scripts\UI\Effects\LetterSpacing.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Controls\UISwitchSelect.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Character Select\3D\Demo_CharacterSelectSlot.cs" />
+     <Compile Include="Assets\Scripts\InterfaceSettings.cs" />
+     <Compile Include="Assets\GUI\!Microlight\MicroBar\Scripts\MicroBarAssetUtilities.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />
