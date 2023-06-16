@@ -185,6 +185,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Window\UIWindowID.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageCell.cs" />
      <Compile Include="Assets\Scripts\NameplatePointing.cs" />
+     <Compile Include="Assets\Scripts\CastAbility.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />
