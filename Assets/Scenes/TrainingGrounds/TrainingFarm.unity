@@ -16582,8 +16582,8 @@ GameObject:
   - component: {fileID: 1504735507}
   - component: {fileID: 1504735508}
   - component: {fileID: 1504735511}
-  - component: {fileID: 1504735509}
   - component: {fileID: 1504735510}
+  - component: {fileID: 1504735509}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -16633,7 +16633,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1504735506}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8499dc55f24dc0f438109e5a90b566fa, type: 3}
+  m_Script: {fileID: 11500000, guid: f422a98a4b5575e49a1d0f92b8a01c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1504735510
@@ -16648,7 +16648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd5184260d1ede4c826dcef8d481543, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas: {fileID: 1354999037}
+  targetFrame: {fileID: 1354999037}
 --- !u!143 &1504735511
 CharacterController:
   m_ObjectHideFlags: 0
@@ -22023,6 +22023,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 58cb338f277a622408dd7da82f6d400d, type: 3}
+    - target: {fileID: 3136980049638727925, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3136980049638727930, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -22162,6 +22166,18 @@ PrefabInstance:
     - target: {fileID: 3136980050769119233, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
       propertyPath: m_LocalScale.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394811525904075312, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394811525904075312, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
+      propertyPath: m_UseToggle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8515989177566839283, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6c675a9d1a6a5479fd9b1925bf8f98, type: 3}
