@@ -9,17 +9,17 @@ public class WarriorClass : ClassManager
     //Define ability names
     public enum Abilities
     {
-        Swing=1, 
-        Whirlwind=2, 
-        Smash=3, 
-        Invigorate=4,
-        Weaken=5, 
-        Bash=6,
-        Intimidate=7,
-        Charge=8,
-        Muster=9,
-        CommandingShout=10,
-        Potion=11
+        Swing=1, //dmg + gain combo point
+        Whirlwind=2, //dmg + spend combo points
+        Smash=3, //dmg + heal reduction + spend combo points
+        Invigorate=4, //dmg + heal self
+        Weaken=5, //dmg + slow target 
+        Bash=6, //dmg + stun target
+        Intimidate=7, //non dmg control
+        Charge=8, //dmg + stun + movement to target
+        Muster=9, //2min cd dmg buff
+        CommandingShout=10, //1min cd group dmg buff
+        Potion=11 //heal potion
     }
 
     private string className = "Warrior";
