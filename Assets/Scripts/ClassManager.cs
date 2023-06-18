@@ -11,7 +11,7 @@ public class ClassManager : MonoBehaviour
         return className;
     }
 
-    public virtual Sprite GetAbilityImage(int n)
+    public virtual Sprite GetAbilitySprite(int n)
     {
         Sprite im = null;
         return im;

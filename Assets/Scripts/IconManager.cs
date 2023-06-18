@@ -53,8 +53,17 @@ public class IconManager : MonoBehaviour
 
     private void UpdateIcons()
     {
-        Debug.Log(playerClass.GetAbilityImage(gameData.GetAbilitySlotNumber(1)));
-        spellSlot1.GetComponent<Image>().sprite = playerClass.GetAbilityImage(gameData.GetAbilitySlotNumber(1));
+        spellSlot1.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(1));
+        spellSlot2.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(2));
+        spellSlot3.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(3));
+        spellSlot4.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(4));
+        spellSlot5.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(5));
+        spellSlot6.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(6));
+        spellSlot7.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(7));
+        spellSlot8.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(8));
+        spellSlot9.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(9));
+        spellSlot10.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(10));
+        spellSlot11.GetComponent<Image>().sprite = playerClass.GetAbilitySprite(gameData.GetAbilitySlotNumber(11));
         isUpdated = true;
 
     }
