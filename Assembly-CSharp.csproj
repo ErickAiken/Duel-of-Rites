@@ -232,6 +232,7 @@
      <None Include="Assets\Polyart\PolyartStudio\Shaders\PA_Grid.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_OtherFoliage.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Effects\PA_CloudCard.shader" />
+     <None Include="Assets\Blink\Tools\SkinnedMeshTransfer\README.txt" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_CliffAuto.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\Dreamscape_Surface_WorldAligned.shader" />
      <None Include="Assets\Polyart\PolyartStudio\Shaders\VS_indirect.cginc" />
