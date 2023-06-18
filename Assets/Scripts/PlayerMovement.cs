@@ -13,13 +13,14 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
+    private PlayerData playerData;
 
     Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        playerData = this.GetComponent<PlayerData>();
     }
 
     // Update is called once per frame

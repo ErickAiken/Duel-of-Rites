@@ -38,6 +38,12 @@ public class SelectObject : MonoBehaviour
             }
         }
 
+        if(Input.GetKey(KeyCode.Escape))
+        {
+            targetObject = null;
+            targetFrame.SetActive(false);
+        }
+
     }//Update
 
     public GameObject getTargetObject()

@@ -191,6 +191,9 @@
      <Compile Include="Assets\Scripts\GameDataManager.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\AbilityManager.cs" />
+     <Compile Include="Assets\Scripts\WarriorClass.cs" />
+     <Compile Include="Assets\Scripts\ClassManager.cs" />
+     <Compile Include="Assets\Scripts\IconManager.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />

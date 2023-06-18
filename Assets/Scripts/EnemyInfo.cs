@@ -10,6 +10,9 @@ public class EnemyInfo : MonoBehaviour
     private Image floatingHealthBar;
     private float healthPercent = 1.0f;
 
+    private bool underStunEffect = false;
+    private bool underControlEffect = false;
+
     // Start is called before the first frame update
     void Start()
     {

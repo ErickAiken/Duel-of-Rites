@@ -9,6 +9,9 @@ public class PlayerData : MonoBehaviour
     private float playerHealth = 1.0f;
     private float enemyHealth;
 
+    private bool underStunEffect = false;
+    private bool underControlEffect = false;
+
     private GameObject playerUnitFrame;
     private GameObject playerHealthBar;
     private GameObject playerHealthText;
