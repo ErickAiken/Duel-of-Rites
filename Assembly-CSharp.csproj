@@ -49,9 +49,12 @@
      <Compile Include="Assets\GUI\Scripts\Test Scripts\Test_Fill.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Chat\Demo_AddChatMessage.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Controls\Select Field\UISelectField_Option.cs" />
+     <Compile Include="Assets\Scripts\SelectObject.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Tweening\ITweenValue.cs" />
+     <Compile Include="Assets\Scripts\GameDataManager.cs" />
      <Compile Include="Assets\GUI\Scripts\Color Scheme\ColorSchemeShade.cs" />
      <Compile Include="Assets\GUI\Scripts\Test Scripts\Test_FadeInOut.cs" />
+     <Compile Include="Assets\Scripts\NameplatePointing.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageColliderData.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Tweening\FloatTween.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageData.cs" />
@@ -62,6 +65,7 @@
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Examples\ExampleRuntimeTreeAdder.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\UIDragObject.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\Scripts\Misc\SmoothMouseLook.cs" />
+     <Compile Include="Assets\Scripts\AbilityManager.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Demo_QualitySlider.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Controls\Select Field\UISelectField_Transition.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\Foliage.cs" />
@@ -86,6 +90,7 @@
      <Compile Include="Assets\GUI\Scripts\Demo\Character Create\Demo_CharacterCreateMgr.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Bars\UIBulletBar.cs" />
      <Compile Include="Assets\Scripts\CameraControl.cs" />
+     <Compile Include="Assets\Scripts\AbilityBarTransitions.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Controls\UISwitchSelect.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Character Select\3D\Demo_CharacterSelectSlot.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Demo_LookAtCamera.cs" />
@@ -101,6 +106,7 @@
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageWindTreeWind.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Raycast Filters\UIRectangularRaycastFilter.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Miscellaneous\UIProgressBarDisplayValue.cs" />
+     <Compile Include="Assets\Scripts\WarriorClass.cs" />
      <Compile Include="Assets\GUI\Scripts\Color Scheme\ColorSchemeManager.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliagePainter.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Miscellaneous\UISliderDisplayValue.cs" />
@@ -109,6 +115,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Modal Box\UIModalBoxManager.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Mesh Modifiers\UIDrawVertices.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Effects\LetterSpacing.cs" />
+     <Compile Include="Assets\Scripts\EnemyInfo.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Miscellaneous\UIInputCaretOffset.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageTerrainListener.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Controls\UITab.cs" />
@@ -121,11 +128,13 @@
      <Compile Include="Assets\GUI\Scripts\UI\Raycast Filters\UIIgnoreRaycast.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Loading Overlay\UILoadingOverlayManager.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Examples\ExampleRuntimeSettings.cs" />
+     <Compile Include="Assets\Scripts\ClassManager.cs" />
      <Compile Include="Assets\GUI\Scripts\Color Scheme\IColorSchemeElement.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\DreamscapeCampsite\Scripts\Flickering.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Scene System\UISceneManager.cs" />
      <Compile Include="Assets\GUI\Scripts\Attributes\ResourcePathAttribute.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Demo_ResolutionSelect.cs" />
+     <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageWindTreeUtilities.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\Scripts\Tools\FoliageInteractor.cs" />
      <Compile Include="Assets\GUI\Scripts\Attributes\BitMaskAttribute.cs" />
@@ -144,6 +153,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Window\UICloseAndShowWindow.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageRenderer.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\UIAlwaysOnTop.cs" />
+     <Compile Include="Assets\Scripts\ApplyArmor.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Miscellaneous\UIGlobeFillInverter.cs" />
      <Compile Include="Assets\GUI\Scripts\Miscellaneous\CommonColorBuffer.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageInstance.cs" />
@@ -184,17 +194,8 @@
      <Compile Include="Assets\GUI\Scripts\UI\Modal Box\UIModalBox.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Window\UIWindowID.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageCell.cs" />
-     <Compile Include="Assets\Scripts\NameplatePointing.cs" />
-     <Compile Include="Assets\Scripts\EnemyInfo.cs" />
-     <Compile Include="Assets\Scripts\SelectObject.cs" />
-     <Compile Include="Assets\Scripts\AbilityBarTransitions.cs" />
-     <Compile Include="Assets\Scripts\GameDataManager.cs" />
-     <Compile Include="Assets\Scripts\PlayerData.cs" />
-     <Compile Include="Assets\Scripts\AbilityManager.cs" />
-     <Compile Include="Assets\Scripts\WarriorClass.cs" />
-     <Compile Include="Assets\Scripts\ClassManager.cs" />
      <Compile Include="Assets\Scripts\IconManager.cs" />
-     <Compile Include="Assets\Scripts\ApplyArmor.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />
