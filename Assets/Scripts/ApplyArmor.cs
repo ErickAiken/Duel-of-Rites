@@ -26,8 +26,8 @@ public class ApplyArmor : MonoBehaviour
         GameObject prefabArmor = ReturnDecendantOfParent(prefabArmorSet, "Armor");
 
         // For each armor under the prefab store the mesh renderer to list
-        SkinnedMeshRenderer[] skinnedMeshRenderersList = new SkinnedMeshRenderer[prefabArmor.transform.GetChildCount()];
-        for(int i = 0; i < prefabArmor.transform.GetChildCount(); i++)
+        SkinnedMeshRenderer[] skinnedMeshRenderersList = new SkinnedMeshRenderer[prefabArmor.transform.childCount];
+        for(int i = 0; i < prefabArmor.transform.childCount; i++)
         {
             GameObject gameObj = prefabArmor.transform.GetChild(i).gameObject;
             skinnedMeshRenderersList[i] = gameObj.GetComponent<SkinnedMeshRenderer>();
