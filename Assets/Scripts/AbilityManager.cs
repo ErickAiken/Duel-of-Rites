@@ -13,6 +13,7 @@ public class AbilityManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         playerData = this.GetComponent<PlayerData>(); 
         gameData = gameManager.GetComponent<GameDataManager>();
     }

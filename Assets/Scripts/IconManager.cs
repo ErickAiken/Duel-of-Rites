@@ -27,6 +27,7 @@ public class IconManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         gameData = gameManager.GetComponent<GameDataManager>();
         playerClass = gameData.GetPlayerClass();
         spellSlot1 = GameObject.Find("Spell Slot 1");

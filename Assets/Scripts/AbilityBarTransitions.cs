@@ -24,6 +24,7 @@ public class AbilityBarTransitions : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gameManager = GameObject.Find("GameManager");
         gameData = gameManager.GetComponent<GameDataManager>();
         spellSlot1 = GameObject.Find("Spell Slot 1");
         spellSlot2 = GameObject.Find("Spell Slot 2");
