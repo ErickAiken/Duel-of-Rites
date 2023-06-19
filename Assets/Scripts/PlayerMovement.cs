@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float distToGround;
 
+    public bool isGrounded;
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
@@ -19,18 +20,32 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody rb;
     Collider cldr;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        if (!rb)
+            Debug.Log("Player rigid body component not found.");
         cldr = GetComponent<CapsuleCollider>();
+        if (!cldr)
+            Debug.Log("Player capsule collider not found.");
+        animator = GetComponentInChildren<Animator>();
+        if (!animator)
+            Debug.Log("Player animator not found.");
         distToGround = cldr.bounds.extents.y;
+        isGrounded = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        animator.SetBool("isRunningForward", false);
+        animator.SetBool("isRunningBackward", false);
+        animator.SetBool("isJumping", false);
+
+        IsGrounded();
         movementPlane = Camera.main.transform.forward;
         characterDir = rb.transform.forward;
         movementPlane.y = 0.0f;
@@ -43,11 +58,21 @@ public class PlayerMovement : MonoBehaviour
             }else{
                 rb.transform.position = rb.transform.position + characterDir * moveSpeed * Time.deltaTime;
             }
+            if (isGrounded)
+            {
+                animator.SetBool("isRunningForward", true);
+                animator.SetBool("isRunningBackward", false);
+            }
         }
 
         if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
             if( !Input.GetKey(KeyCode.W) && !autoRun){
                 rb.transform.position = rb.transform.position + movementPlane * moveSpeed * Time.deltaTime;
+            }
+            if (isGrounded)
+            {
+                animator.SetBool("isRunningForward", true);
+                animator.SetBool("isRunningBackward", false);
             }
         }
 
@@ -66,6 +91,11 @@ public class PlayerMovement : MonoBehaviour
                 rb.transform.position = rb.transform.position - movementPlane * moveSpeed * Time.deltaTime;
             }
             autoRun = false;
+            if (isGrounded)
+            {
+                animator.SetBool("isRunningForward", false);
+                animator.SetBool("isRunningBackward", true);
+            }
         }
 
         if(Input.GetKey(KeyCode.D)){
@@ -92,16 +122,20 @@ public class PlayerMovement : MonoBehaviour
         }
 
         // Jump
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            animator.SetBool("isJumping", true);
             Vector3 jumpForce = new Vector3(0, jumpHeight, 0);
             rb.AddForce(jumpForce, ForceMode.Impulse);
         }
         
     }
 
-    public bool IsGrounded()
+    public void IsGrounded()
     {
-        return Physics.Raycast(rb.transform.position, -Vector3.up, distToGround + 0.1f);
+        if (Physics.Raycast(rb.transform.position, -Vector3.up, distToGround + 0.1f))
+            isGrounded = true;
+        else
+            isGrounded = false;
     }
 }

@@ -28,14 +28,14 @@ public class PlayerAnimationController : MonoBehaviour
     
         if(Input.GetKey("w") || playerMovement.autoRun)
         {
-            if(playerMovement.IsGrounded())
+            if(playerMovement.isGrounded)
             {
                 animator.SetBool("isRunningForward", true);
                 animator.SetBool("isRunningBackward", false);
             }
         }
         if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
-            if(playerMovement.IsGrounded())
+            if(playerMovement.isGrounded)
             {
                 animator.SetBool("isRunningForward", true);
                 animator.SetBool("isRunningBackward", false);
@@ -43,17 +43,18 @@ public class PlayerAnimationController : MonoBehaviour
         }
         if(Input.GetKey("s"))
         {
-            if(playerMovement.IsGrounded())
+            if(playerMovement.isGrounded)
             {
                 animator.SetBool("isRunningForward", false);
                 animator.SetBool("isRunningBackward", true);
             }
         }
 
-        if(Input.GetKey(KeyCode.Space) && !playerMovement.IsGrounded()){
+        if(Input.GetKey(KeyCode.Space) && !playerMovement.isGrounded)
+        {
             animator.SetBool("isJumping", true);
         }
-        else if(playerMovement.IsGrounded())
+        else if(!playerMovement.isGrounded)
         {
             animator.SetBool("isJumping", false);
         }
