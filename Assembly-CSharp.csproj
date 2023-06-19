@@ -138,7 +138,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Raycast Filters\UIMaskRaycastFilter.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageType.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Tweening\TweenEasing.cs" />
-     <Compile Include="Assets\Scripts\AnimationController.cs" />
+     <Compile Include="Assets\Scripts\PlayerAnimationController.cs" />
      <Compile Include="Assets\GUI\!Microlight\MicroBar\Scripts\MicroBarAssetUtilities.cs" />
      <Compile Include="Assets\GUI\Scripts\Demo\Character Select\3D\Demo_CharacterSelectMgr.cs" />
      <Compile Include="Assets\GUI\Scripts\UI\Window\UICloseAndShowWindow.cs" />
@@ -194,6 +194,7 @@
      <Compile Include="Assets\Scripts\WarriorClass.cs" />
      <Compile Include="Assets\Scripts\ClassManager.cs" />
      <Compile Include="Assets\Scripts\IconManager.cs" />
+     <Compile Include="Assets\Scripts\ApplyArmor.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />
