@@ -7,15 +7,23 @@ public class ApplyArmor : MonoBehaviour
 {
 
 
-    public GameObject prefabArmorSet;
+    private GameObject prefabArmorSet;
     private Transform newArmature;
     private Transform newParent;
     private GameObject descendant = null;
+    private GameObject gameManager;
+    private GameDataManager gameData;
 
 
     // Start is called before the first frame update
     void Start()
     {
+
+        gameManager = GameObject.Find("GameManager");
+        gameData = gameManager.GetComponent<GameDataManager>();
+
+        GameObject prefabArmorSet = Instantiate(Resources.Load<GameObject>(gameData.GetArmorSetPath()));
+
         // Make the parent the players armor game object
         newParent = ReturnDecendantOfParent(gameObject, "Armors").transform;
 

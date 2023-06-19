@@ -24,6 +24,14 @@ public class GameDataManager : MonoBehaviour
     // Define class
     private ClassManager playerClass = new WarriorClass();
 
+    // Define race and sex
+    private bool isMale = true;
+    private string race = "Human";
+
+    // Define the armor set
+    private string armorSetPath = "HumanMaleBasicArmor";
+    
+
     // Define which ability is assigned to what spell slot
     private int ability1 = 1;
     private int ability2 = 2;
@@ -90,6 +98,11 @@ public class GameDataManager : MonoBehaviour
             default:
                 return -1;
         }
+    }
+
+    public string GetArmorSetPath()
+    {
+        return armorSetPath;
     }
 
     public KeyCode GetActionButtonKeybind1()
