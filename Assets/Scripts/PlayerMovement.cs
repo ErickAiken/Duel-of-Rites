@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    public CharacterController controller;
     public float moveSpeed = 5.0f;
     public float rotateSpeed = 5.0f;
     public bool autoRun = false;
@@ -102,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
         return Physics.Raycast(rb.transform.position, -Vector3.up, distToGround + 0.1f);
     }

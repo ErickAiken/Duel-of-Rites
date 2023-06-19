@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 4401529039939464548}
   - component: {fileID: 284923250412832149}
   - component: {fileID: 6930991917950024261}
+  - component: {fileID: 491114340467459161}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -166,7 +167,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdd524ce86713f448b3af92bcbb192ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
   moveSpeed: 7.5
   rotateSpeed: 20
   autoRun: 0
@@ -266,6 +266,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &491114340467459161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4401529039939464556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd121c06149f5d642a660dc444c946d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4401529040093242421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2444,6 +2456,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 783130911217948957, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2888b112f5688c14faefe99c88249287, type: 2}
     - target: {fileID: 783130911217948958, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
       propertyPath: m_Name
       value: HumanMale_Character

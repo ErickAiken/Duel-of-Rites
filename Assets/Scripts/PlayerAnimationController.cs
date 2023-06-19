@@ -2,20 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AnimationController : MonoBehaviour
+public class PlayerAnimationController : MonoBehaviour
 {
 
     Animator animator;
-    public GameObject player;
     PlayerMovement playerMovement;
     JumpControl jumpControl;
 
     // Start is called before the first frame update
     void Start()
     {
-        animator = GetComponent<Animator>(); 
-        playerMovement = player.GetComponent<PlayerMovement>();
-        jumpControl = GetComponent<JumpControl>();
+        animator = GetComponentInChildren<Animator>();
+        if (!animator)
+            Debug.Log("ANIMATOR NOT FOUND");
+        playerMovement = GetComponent<PlayerMovement>();
+        if (!playerMovement)
+            Debug.Log("PLAYER MOVEMENT COMPONENT NOT FOUND");
     }
 
     // Update is called once per frame
@@ -26,28 +28,33 @@ public class AnimationController : MonoBehaviour
     
         if(Input.GetKey("w") || playerMovement.autoRun)
         {
-            if(jumpControl.isGrounded){
+            if(playerMovement.IsGrounded())
+            {
                 animator.SetBool("isRunningForward", true);
                 animator.SetBool("isRunningBackward", false);
             }
         }
         if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
-            if(jumpControl.isGrounded){
+            if(playerMovement.IsGrounded())
+            {
                 animator.SetBool("isRunningForward", true);
                 animator.SetBool("isRunningBackward", false);
             }
         }
         if(Input.GetKey("s"))
         {
-            if(jumpControl.isGrounded){
+            if(playerMovement.IsGrounded())
+            {
                 animator.SetBool("isRunningForward", false);
                 animator.SetBool("isRunningBackward", true);
             }
         }
 
-        if(Input.GetKey(KeyCode.Space) && !jumpControl.isGrounded){
+        if(Input.GetKey(KeyCode.Space) && !playerMovement.IsGrounded()){
             animator.SetBool("isJumping", true);
-        }else if(jumpControl.isGrounded){
+        }
+        else if(playerMovement.IsGrounded())
+        {
             animator.SetBool("isJumping", false);
         }
         

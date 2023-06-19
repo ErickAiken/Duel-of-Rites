@@ -4093,6 +4093,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4401529039939464554, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
+      propertyPath: animController
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4401529039939464556, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
       propertyPath: m_Name
       value: Player
