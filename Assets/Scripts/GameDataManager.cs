@@ -30,7 +30,6 @@ public class GameDataManager : MonoBehaviour
 
     // Define the armor set
     private string armorSetPath = "HumanMaleBasicArmor";
-    
 
     // Define which ability is assigned to what spell slot
     private int ability1 = 1;

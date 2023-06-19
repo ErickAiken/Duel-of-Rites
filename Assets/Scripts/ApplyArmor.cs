@@ -19,9 +19,11 @@ public class ApplyArmor : MonoBehaviour
     void Start()
     {
 
+        // Load in the game data
         gameManager = GameObject.Find("GameManager");
         gameData = gameManager.GetComponent<GameDataManager>();
 
+        // Add the armor prefab to the scene
         GameObject prefabArmorSet = Instantiate(Resources.Load<GameObject>(gameData.GetArmorSetPath()));
 
         // Make the parent the players armor game object
@@ -42,6 +44,14 @@ public class ApplyArmor : MonoBehaviour
 
         }
         TransferSkinnedMeshes(skinnedMeshRenderersList);
+
+        // Based on armor type, turn on/off body parts and underwear
+        GameObject underwear = ReturnDecendantOfParent(this.gameObject, "Underwear");
+        underwear.SetActive(false);
+
+        GameObject legs = ReturnDecendantOfParent(this.gameObject, "Legs");
+        legs.SetActive(false);
+
     }
 
     // Update is called once per frame

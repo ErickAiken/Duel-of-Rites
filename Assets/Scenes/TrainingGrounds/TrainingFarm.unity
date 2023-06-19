@@ -4093,6 +4093,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4020415108568570420, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4342741556721198494, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
       propertyPath: prefabArmorSet
       value: 

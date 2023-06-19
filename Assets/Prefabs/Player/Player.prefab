@@ -279,7 +279,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb626c8004d4eb2408f7df2e9a6d60df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabArmorSet: {fileID: 0}
 --- !u!1 &4401529040093242421
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,11 +2483,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 783130911374255982, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 783130911472153439, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 783130911484706483, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 783130911729780116, guid: 3ae5d68cbdddccf4685d7db17cd19d49, type: 3}
       propertyPath: m_IsActive
