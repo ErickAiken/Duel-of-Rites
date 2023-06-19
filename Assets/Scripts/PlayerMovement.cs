@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 5.0f;
     public float rotateSpeed = 5.0f;
     public bool autoRun = false;
+    public float jumpHeight = 50f;
+
+    public float distToGround;
 
 
     private Vector3 movementPlane;
@@ -16,11 +19,14 @@ public class PlayerMovement : MonoBehaviour
     private PlayerData playerData;
 
     Rigidbody rb;
+    Collider cldr;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerData = this.GetComponent<PlayerData>();
+        rb = GetComponent<Rigidbody>();
+        cldr = GetComponent<CapsuleCollider>();
+        distToGround = cldr.bounds.extents.y;
     }
 
     // Update is called once per frame
@@ -28,22 +34,22 @@ public class PlayerMovement : MonoBehaviour
     {
         
         movementPlane = Camera.main.transform.forward;
-        characterDir = transform.forward;
+        characterDir = rb.transform.forward;
         movementPlane.y = 0.0f;
 
         if(Input.GetKey(KeyCode.W) || autoRun){
             if(Input.GetMouseButton(0)){
-                transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position + characterDir * moveSpeed * Time.deltaTime;
             }else if(!autoRun){
-                transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position + movementPlane * moveSpeed * Time.deltaTime;
             }else{
-                transform.position = transform.position + characterDir * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position + characterDir * moveSpeed * Time.deltaTime;
             }
         }
 
         if(Input.GetMouseButton(0) && Input.GetMouseButton(1)){
             if( !Input.GetKey(KeyCode.W) && !autoRun){
-                transform.position = transform.position + movementPlane * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position + movementPlane * moveSpeed * Time.deltaTime;
             }
         }
 
@@ -57,28 +63,28 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetKey(KeyCode.S)){
             if(Input.GetMouseButton(0)){
-                transform.position = transform.position - characterDir * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position - characterDir * moveSpeed * Time.deltaTime;
             }else{
-                transform.position = transform.position - movementPlane * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position - movementPlane * moveSpeed * Time.deltaTime;
             }
             autoRun = false;
         }
 
         if(Input.GetKey(KeyCode.D)){
-            transform.Rotate(Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
+            rb.transform.Rotate(Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
         }
 
         if(Input.GetKey(KeyCode.A)){
-            transform.Rotate(-Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
+            rb.transform.Rotate(-Vector3.up * rotateSpeed * 15.0f * Time.deltaTime);
         }
 
         // Strafe Right
         if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.D)){
             Debug.Log("Strafe Right");
             if(Input.GetKey(KeyCode.W)){
-                transform.position = transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * Time.deltaTime;
+                rb.transform.position = rb.transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * Time.deltaTime;
             }else{
-                transform.position = transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * moveSpeed * Time.deltaTime;
+                rb.transform.position = rb.transform.position + Quaternion.Euler(0f,45f,0f) * characterDir * moveSpeed * Time.deltaTime;
             }
         }
 
@@ -86,6 +92,18 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetMouseButton(1) && Input.GetKey(KeyCode.A)){
             Debug.Log("Strafe Left");
         }
+
+        // Jump
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
+        {
+            Vector3 jumpForce = new Vector3(0, jumpHeight, 0);
+            rb.AddForce(jumpForce, ForceMode.Impulse);
+        }
         
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics.Raycast(rb.transform.position, -Vector3.up, distToGround + 0.1f);
     }
 }
