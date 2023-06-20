@@ -52,12 +52,26 @@ public class ApplyArmor : MonoBehaviour
         GameObject legs = ReturnDecendantOfParent(this.gameObject, "Legs");
         legs.SetActive(false);
 
-    }
+        // Get and apply the weapon
+        GameObject weapon = Instantiate(Resources.Load<GameObject>(gameData.GetWeaponPath()), Vector3.zero, Quaternion.identity);
+        switch(gameData.GetWeaponType())
+        {
+            case GameDataManager.WeaponType.DualHand:
+                Transform twohandrest = ReturnDecendantOfParent(this.gameObject, "2H_REST").transform;
+                weapon.transform.SetParent(twohandrest, false);
+                break;
+            default:
+                break;
+        }
+
+
+
+    }//Start
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     private void TransferSkinnedMeshes(SkinnedMeshRenderer[] skinnedMeshRenderersList)

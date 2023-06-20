@@ -5,6 +5,16 @@ using UnityEngine.UI;
 
 public class GameDataManager : MonoBehaviour
 {
+
+
+    public enum WeaponType
+    {
+        LeftHand,
+        RightHand,
+        DualHand,
+        
+    }
+
     // This class holds all the data needed to transition scenes.
     public static GameDataManager instance;
 
@@ -28,8 +38,11 @@ public class GameDataManager : MonoBehaviour
     private bool isMale = true;
     private string race = "Human";
 
-    // Define the armor set
+    // Define the armor set and weapon
     private string armorSetPath = "HumanMaleBasicArmor";
+    private string weaponPath = "Basic2HSword";
+    private WeaponType weaponType = WeaponType.DualHand;
+    
 
     // Define which ability is assigned to what spell slot
     private int ability1 = 1;
@@ -102,6 +115,16 @@ public class GameDataManager : MonoBehaviour
     public string GetArmorSetPath()
     {
         return armorSetPath;
+    }
+
+    public string GetWeaponPath()
+    {
+        return weaponPath;
+    }
+
+    public WeaponType GetWeaponType()
+    {
+        return weaponType;
     }
 
     public KeyCode GetActionButtonKeybind1()
