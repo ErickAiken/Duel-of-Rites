@@ -41,7 +41,6 @@ public class PlayerData : MonoBehaviour
         currentTarget = this.GetComponent<SelectObject>().getTargetObject();
         updatePlayerHealth();
         updateEnemyHealth();
-
     }
 
     private void updatePlayerHealth()
