@@ -44,6 +44,7 @@ public class ApplyArmor : MonoBehaviour
 
         }
         TransferSkinnedMeshes(skinnedMeshRenderersList);
+        Destroy(prefabArmorSet);
 
         // Based on armor type, turn on/off body parts and underwear
         GameObject underwear = ReturnDecendantOfParent(this.gameObject, "Underwear");

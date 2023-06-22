@@ -36,6 +36,7 @@ public class AnimationManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        animator.Play("IdleCombat");
         animator.SetBool("isRunningForward", false);
         animator.SetBool("isRunningBackward", false);
         animator.SetBool("isJumping", false);
