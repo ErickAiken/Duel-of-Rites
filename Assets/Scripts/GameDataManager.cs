@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameDataManager : MonoBehaviour
 {
 
-
     public enum WeaponType
     {
         LeftHand,

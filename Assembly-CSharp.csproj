@@ -195,7 +195,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Window\UIWindowID.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageCell.cs" />
      <Compile Include="Assets\Scripts\IconManager.cs" />
-     <Compile Include="Assets\Scripts\AnimationState.cs" />
+     <Compile Include="Assets\Scripts\AnimationManager.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />

@@ -4093,6 +4093,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2500488884508265619, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1380702175}
+    - target: {fileID: 3474735733452526193, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1380702175}
     - target: {fileID: 4020415108568570420, guid: 7f871d6c065baef4d93ac63ccb19e411, type: 3}
       propertyPath: m_IsActive
       value: 1

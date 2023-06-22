@@ -10,21 +10,23 @@ public class PlayerMovement : MonoBehaviour
     public float jumpHeight = 50f;
 
     public float distToGround;
-
     public bool isGrounded;
 
     private Vector3 movementPlane;
     private Vector3 characterDir;
     private PlayerData playerData;
-
-    Rigidbody rb;
-    Collider cldr;
+    private AnimationManager animationManager;
 
     Animator animator;
+    Rigidbody rb;
+    Collider cldr;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        animationManager = GetComponent<AnimationManager>();
+
         rb = GetComponent<Rigidbody>();
         if (!rb)
             Debug.Log("Player rigid body component not found.");
@@ -41,10 +43,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("isRunningForward", false);
-        animator.SetBool("isRunningBackward", false);
-        animator.SetBool("isJumping", false);
-
         IsGrounded();
         movementPlane = Camera.main.transform.forward;
         characterDir = rb.transform.forward;
@@ -60,8 +58,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (isGrounded)
             {
-                animator.SetBool("isRunningForward", true);
-                animator.SetBool("isRunningBackward", false);
+                animationManager.UpdateAnimationState(AnimationManager.AnimationState.runningForward);
             }
         }
 
@@ -71,8 +68,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if (isGrounded)
             {
-                animator.SetBool("isRunningForward", true);
-                animator.SetBool("isRunningBackward", false);
+                animationManager.UpdateAnimationState(AnimationManager.AnimationState.runningForward);
             }
         }
 
@@ -93,8 +89,7 @@ public class PlayerMovement : MonoBehaviour
             autoRun = false;
             if (isGrounded)
             {
-                animator.SetBool("isRunningForward", false);
-                animator.SetBool("isRunningBackward", true);
+                animationManager.UpdateAnimationState(AnimationManager.AnimationState.runningBackward);
             }
         }
 
@@ -124,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
         // Jump
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            animator.SetBool("isJumping", true);
+            animationManager.UpdateAnimationState(AnimationManager.AnimationState.jumping);
             Vector3 jumpForce = new Vector3(0, jumpHeight, 0);
             rb.AddForce(jumpForce, ForceMode.Impulse);
         }
