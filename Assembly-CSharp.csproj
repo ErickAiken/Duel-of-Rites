@@ -53,6 +53,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Tweening\ITweenValue.cs" />
      <Compile Include="Assets\Scripts\GameDataManager.cs" />
      <Compile Include="Assets\GUI\Scripts\Color Scheme\ColorSchemeShade.cs" />
+     <Compile Include="Assets\Scripts\Utils.cs" />
      <Compile Include="Assets\GUI\Scripts\Test Scripts\Test_FadeInOut.cs" />
      <Compile Include="Assets\Scripts\NameplatePointing.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageColliderData.cs" />
@@ -194,7 +195,7 @@
      <Compile Include="Assets\GUI\Scripts\UI\Window\UIWindowID.cs" />
      <Compile Include="Assets\Polyart\PolyartStudio\SharedResources\CritiasFoliage\Code\FoliageCell.cs" />
      <Compile Include="Assets\Scripts\IconManager.cs" />
-     <Compile Include="Assets\Scripts\Utils.cs" />
+     <Compile Include="Assets\Scripts\AnimationState.cs" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_Grass.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Foliage\PA_TreeWind_CustomLighting.shader" />
      <None Include="Assets\Polyart\PolyartStudio\SharedResources\Shaders\Terrain\PA_Planet.shader" />

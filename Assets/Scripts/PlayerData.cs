@@ -6,25 +6,39 @@ using UnityEngine.UI;
 public class PlayerData : MonoBehaviour
 {
 
+    public enum CombatState
+    {
+        on, 
+        off, 
+    }
+
+    public enum ControlState
+    {
+        normal,
+        stunned,
+        slowed,
+    }
+
     private float playerHealth = 1.0f;
     private float enemyHealth;
-
-    private bool underStunEffect = false;
-    private bool underControlEffect = false;
-
     private GameObject playerUnitFrame;
     private GameObject playerHealthBar;
     private GameObject playerHealthText;
-
     private GameObject enemyUnitFrame;
     private GameObject enemyHealthBar;
     private GameObject enemyHealthText;
-
     private GameObject currentTarget;
+    private CombatState combatState;
+    private ControlState controlState;
     
+
     // Start is called before the first frame update
     void Start()
     {
+
+        combatState = CombatState.off;
+        controlState = ControlState.normal;
+
         playerUnitFrame = GameObject.Find("Unit Frame (Player)");
         playerHealthBar = playerUnitFrame.transform.Find("Bar (Health)").gameObject;
         playerHealthText = playerHealthBar.transform.Find("Text Group").gameObject.transform.Find("Percentage Text").gameObject;

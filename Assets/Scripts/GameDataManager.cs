@@ -12,7 +12,6 @@ public class GameDataManager : MonoBehaviour
         LeftHand,
         RightHand,
         DualHand,
-        
     }
 
     // This class holds all the data needed to transition scenes.
